@@ -24,7 +24,6 @@
   }
   .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
 
-  /* 顶部导航 */
   nav{
     position:sticky;top:0;z-index:10;
     background:rgba(246,247,249,.85);
@@ -38,17 +37,14 @@
   nav .links a:hover{color:var(--accent);}
   @media(max-width:640px){nav .links{display:none;}}
 
-  /* Hero */
-  header{padding:64px 0 40px;}
-  .role{display:inline-block;font-size:13px;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:6px;margin-bottom:16px;}
+  header{padding:56px 0 40px;}
   h1{font-size:44px;letter-spacing:2px;line-height:1.2;}
-  .subtitle{font-size:17px;color:var(--sub);margin-top:10px;}
+  .role{display:inline-block;font-size:14px;color:var(--accent);background:var(--accent-soft);padding:5px 12px;border-radius:6px;margin-top:10px;font-weight:600;}
   .meta{margin-top:22px;font-size:14px;color:var(--sub);display:flex;flex-wrap:wrap;gap:8px 18px;}
   .meta a{color:var(--sub);text-decoration:none;border-bottom:1px dashed transparent;transition:.2s;}
   .meta a:hover{color:var(--accent);border-bottom-color:var(--accent);}
 
-  /* 数据 */
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:36px 0 8px;}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0 8px;}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;}
   .stat .num{font-size:30px;font-weight:700;line-height:1.1;}
   .stat .num span{font-size:14px;font-weight:500;color:var(--sub);margin-left:4px;}
@@ -58,7 +54,6 @@
   .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;}
   .tag{font-size:13px;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:5px 12px;}
 
-  /* 区块 */
   section{padding:48px 0;border-top:1px solid var(--line);}
   .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:26px;}
   .sec-head h2{font-size:22px;letter-spacing:1px;}
@@ -74,9 +69,21 @@
   .kv b{color:var(--ink);font-weight:600;}
   .card h3{font-size:15px;margin-bottom:6px;}
   .card .desc{font-size:14px;color:var(--sub);}
-  .card .num-mark{font-size:12px;color:var(--accent);letter-spacing:1px;margin-bottom:10px;}
 
-  /* 项目 */
+  .edu-line{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;}
+  .edu-line b{font-size:15px;}
+  .edu-line .when{font-size:13px;color:var(--sub);}
+  .skill-item{margin-top:14px;}
+  .skill-item:first-child{margin-top:0;}
+  .skill-item .k{font-size:13px;color:var(--accent);font-weight:600;letter-spacing:.5px;}
+  .skill-item p{font-size:14.5px;color:#374151;margin-top:2px;}
+
+  .side-stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;text-align:center;}
+  .side-stat + .side-stat{margin-top:14px;}
+  .side-stat .num{font-size:30px;font-weight:700;line-height:1.1;}
+  .side-stat .num span{font-size:14px;font-weight:500;color:var(--sub);margin-left:4px;}
+  .side-stat .cap{font-size:13px;color:var(--sub);margin-top:8px;}
+
   .proj-title{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;}
   .proj-title h3{font-size:18px;font-weight:700;}
   .proj-title .when{font-size:13px;color:var(--sub);}
@@ -85,7 +92,6 @@
   .blk .k{font-size:13px;color:var(--accent);font-weight:600;letter-spacing:.5px;}
   .blk p{font-size:14.5px;color:#374151;margin-top:2px;}
 
-  /* 表格 */
   table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px;}
   th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
   th{font-size:13px;color:var(--sub);font-weight:600;background:#fafbfc;}
@@ -93,7 +99,10 @@
   td{color:#4b5563;}
   @media(max-width:640px){table{font-size:13px;} td:first-child{white-space:normal;}}
 
-  /* 作品 */
+  .tabs{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap;}
+  .tab{font-size:14px;padding:7px 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--sub);cursor:pointer;transition:.2s;}
+  .tab.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+
   .work{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;}
   .work:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(16,24,40,.08);}
   .work .cover{height:120px;display:flex;align-items:flex-end;padding:14px 18px;color:#fff;font-size:12px;letter-spacing:1px;}
@@ -105,8 +114,8 @@
   .work .body .data{font-size:13px;color:var(--sub);}
   .work .body .go{margin-top:auto;font-size:13px;color:var(--accent);text-decoration:none;font-weight:600;}
   .work .body .go:hover{text-decoration:underline;}
+  .work .badge{display:inline-block;font-size:11px;color:var(--sub);border:1px solid var(--line);border-radius:6px;padding:2px 8px;align-self:flex-start;margin-bottom:4px;}
 
-  /* 游戏理解 */
   .understand{display:grid;gap:16px;}
   .ugame{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;}
   .ugame .name{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;}
@@ -114,7 +123,6 @@
   .ugame .name .cat{font-size:12px;color:var(--sub);}
   .ugame p{font-size:14px;color:#4b5563;margin-top:10px;}
 
-  /* 联系 */
   footer{padding:48px 0 72px;}
   .contact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;text-align:center;}
   .contact h2{font-size:20px;margin-bottom:8px;}
@@ -141,20 +149,18 @@
 
 <header>
   <div class="wrap">
-    <div class="role">2026 实习生 · 游戏策划培训生</div>
     <h1>杨一丹</h1>
-    <div class="subtitle">游戏体验测评方向 · 开放世界 / 平台跳跃 / 模拟经营</div>
+    <div class="role">游戏策划培训生 · 游戏体验测评方向</div>
     <div class="meta">
       <span>山西省忻州市</span>
       <span><a href="tel:19722710019">197-2271-0019</a></span>
       <span><a href="mailto:2313966850@qq.com">2313966850@qq.com</a></span>
-      <span>可实习：2026.11 — 2027.06</span>
     </div>
 
     <div class="stats">
       <div class="stat">
         <div class="num">7<span>年</span></div>
-        <div class="cap">游戏龄（2019 年起持续游玩）</div>
+        <div class="cap">游戏龄</div>
       </div>
       <div class="stat">
         <div class="num">30<span>+ 款</span></div>
@@ -162,7 +168,7 @@
       </div>
       <div class="stat">
         <div class="num">1700<span>+ 小时</span></div>
-        <div class="cap">Steam 300h · 手游年均 200h+</div>
+        <div class="cap">Steam 304h · WeGame 1400h+</div>
       </div>
     </div>
 
@@ -182,35 +188,52 @@
     <div class="sec-head"><h2>关于我</h2><span class="en">About</span><span class="rule"></span></div>
 
     <div class="grid-2">
-      <div class="card">
-        <div class="num-mark">EDUCATION</div>
-        <h3>晋中学院 · 思想政治教育 · 本科</h3>
-        <div class="desc">2023.09 — 2027.06（预计毕业）</div>
-        <div class="desc" style="margin-top:8px;">主修课程：心理学、逻辑学、社会学、公文写作。习惯从玩家动机与行为角度解释体验问题，而非只描述现象。</div>
+      <div>
+        <div class="card">
+          <h3 style="font-size:16px;margin-bottom:12px;">教育经历</h3>
+          <div class="edu-line">
+            <b>晋中学院 | 思想政治教育 | 本科</b>
+            <span class="when">2023.09 - 2027.06（预计毕业）</span>
+          </div>
+          <div class="desc" style="margin-top:8px;">主修课程：心理学、逻辑学、社会学、公文写作。</div>
+        </div>
+
+        <div class="card" style="margin-top:16px;">
+          <h3 style="font-size:16px;margin-bottom:4px;">技能</h3>
+          <div class="skill-item">
+            <div class="k">开放世界拆解</div>
+            <p>从探索动线、关卡引导、战斗手感、长线养成四个维度拆解体验，能以同类产品为参照做横向对照，提出用户体验优化建议。</p>
+          </div>
+          <div class="skill-item">
+            <div class="k">体验反馈产出</div>
+            <p>独立完成选题、脚本、录制、剪辑与数据复盘，单条播放 6.8 万+、点赞近 2000+；擅长把体验写成「机制—体验—问题—建议」的结构化反馈。</p>
+          </div>
+          <div class="skill-item">
+            <div class="k">问题记录与闭环</div>
+            <p>独立统筹 200 人规模电竞赛事，产出完整执行 SOP 与三级应急预案，达成 100% 完赛率、0 重大事故；习惯「记录—复现—改进—回查」。</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="num-mark">FOCUS</div>
-        <h3>我在做什么</h3>
-        <div class="desc">玩的时候记录：卡关位置、触发条件、缺失的提示；玩完之后对照同类产品，把「哪里别扭」写成具体的交互节点、可能原因与改法。目标是把主观感受变成可被策划直接使用的反馈。</div>
+
+      <div>
+        <div class="side-stat">
+          <div class="num">1<span>年</span></div>
+          <div class="cap">电竞社管理经验</div>
+        </div>
+        <div class="side-stat">
+          <div class="num">200<span>+</span></div>
+          <div class="cap">独立操盘赛事规模</div>
+        </div>
+        <div class="side-stat">
+          <div class="num">6.8<span>万+</span></div>
+          <div class="cap">抖音单条作品播放</div>
+        </div>
       </div>
     </div>
 
-    <div class="grid-3" style="margin-top:16px;">
-      <div class="card">
-        <div class="num-mark">01</div>
-        <h3>开放世界拆解</h3>
-        <div class="desc">从探索动线、关卡引导、战斗手感、长线养成四个维度拆解体验，并具备以同类产品为参照做横向对照、提出用户体验优化建议的能力。</div>
-      </div>
-      <div class="card">
-        <div class="num-mark">02</div>
-        <h3>体验反馈产出</h3>
-        <div class="desc">独立完成视频选题、脚本、录制、剪辑与数据复盘，单条播放 6.8 万+、点赞近 2000+；擅长把体验写成「机制—体验—问题—建议」的结构化反馈。</div>
-      </div>
-      <div class="card">
-        <div class="num-mark">03</div>
-        <h3>问题记录与闭环</h3>
-        <div class="desc">独立统筹 200 人规模电竞赛事，产出完整执行 SOP 与三级应急预案，达成 100% 完赛率、0 重大事故；习惯「记录—复现—改进—回查」。</div>
-      </div>
+    <div class="card" style="margin-top:16px;">
+      <h3 style="font-size:16px;margin-bottom:10px;">自我介绍</h3>
+      <p style="font-size:14.5px;color:#374151;line-height:1.85;">1 年电竞社管理经验，独立操盘 200 人规模高校电竞赛事，熟悉活动全链路执行与风险管控；主修心理学、逻辑学与社会学，习惯从玩家动机与行为角度拆解体验，能区分"情绪宣泄"与"真实需求"；独立运营游戏短视频账号，懂玩家话语体系，渴望将玩家热爱转化为可落地的运营动作。</p>
     </div>
   </div>
 </section>
@@ -242,18 +265,18 @@
     </div>
 
     <div class="card" style="margin-top:16px;">
-      <div class="num-mark">复盘报告 · 以组织者视角整理</div>
+      <div style="font-size:12px;color:var(--accent);letter-spacing:1px;margin-bottom:6px;">复盘报告 · 以组织者视角整理</div>
       <h3 style="font-size:17px;">一场 200 人校内赛事，是怎么跑完的</h3>
       <div class="desc" style="margin-top:6px;">按「赛前设计 → 现场执行 → 问题处理 → 数据结果 → 可复用经验」五段整理，重点记录出现的问题与对应改法。</div>
 
       <div class="blocks" style="margin-top:18px;">
         <div class="blk">
           <div class="k">赛制与赛务设计</div>
-          <p>单人报名池按段位与赛区拆分，小组赛 + 淘汰赛双轨，减少单局等待；报名表单只保留「账号 / 段位 / 可参赛时段 / 联系方式」四项并加必填校验，把后续的信息错漏率降到可接受范围；赛程表按机房与设备数量倒排，避免同一时段超载。</p>
+          <p>单人报名池按段位与赛区拆分，小组赛 + 淘汰赛双轨，减少单局等待；报名表单只保留「账号 / 段位 / 可参赛时段 / 联系方式」四项并加必填校验，把后续的信息错漏率降到可接受范围；赛程表按场地与设备数量倒排，避免同一时段超载。</p>
         </div>
         <div class="blk">
           <div class="k">风险预案（三级）</div>
-          <p>一级：选手迟到 / 冲突，设置 10 分钟候场与仲裁人现场裁定；二级：设备与外设故障，备用键鼠 + 备用机位 + 赛前 30 分钟统一自检；三级：网络异常，预留备用网络与可切换机房，并提前公示应急替换规则。</p>
+          <p>一级：选手迟到 / 冲突，设置 10 分钟候场与仲裁人现场裁定；二级：设备与手机故障，备用手机 + 备用机位 + 赛前 30 分钟统一自检；三级：网络异常，预留备用网络，并提前公示应急替换规则。</p>
         </div>
         <div class="blk">
           <div class="k">现场问题与处理</div>
@@ -272,10 +295,10 @@
             <td>提前一天线上核对身份，现场只做确认</td>
           </tr>
           <tr>
-            <td>外设临时失灵</td>
+            <td>手机设备临时故障</td>
             <td>选手自带设备型号不一，赛前未统一自检</td>
-            <td>调备用键鼠，顺延该场次 10 分钟</td>
-            <td>赛前 30 分钟统一自检 + 备用件清点清单</td>
+            <td>调用备用手机，顺延该场次 10 分钟</td>
+            <td>赛前 30 分钟统一自检 + 备用手机清点清单</td>
           </tr>
           <tr>
             <td>对阵规则争议</td>
@@ -298,12 +321,19 @@
 
 <section id="works">
   <div class="wrap">
-    <div class="sec-head"><h2>作品</h2><span class="en">Works</span><span class="rule"></span></div>
+    <div class="sec-head"><h2>作品展示</h2><span class="en">Works</span><span class="rule"></span></div>
 
-    <div class="grid-3">
-      <div class="work">
+    <div class="tabs">
+      <button class="tab active" data-cat="all">全部作品</button>
+      <button class="tab" data-cat="project">项目经历</button>
+      <button class="tab" data-cat="shortvideo">下沉平台作品</button>
+    </div>
+
+    <div class="grid-3" id="works-grid">
+      <div class="work" data-cat="shortvideo">
         <div class="cover c1">短视频 · 游戏体验向</div>
         <div class="body">
+          <span class="badge">下沉平台作品</span>
           <h3>《光遇》情绪体验向｜弱引导与陪伴感的设计得失</h3>
           <div class="data">播放 6.8 万+ · 点赞近 2000+</div>
           <div class="data">单人完成选题、脚本、录制与剪辑</div>
@@ -311,9 +341,10 @@
         </div>
       </div>
 
-      <div class="work">
+      <div class="work" data-cat="shortvideo">
         <div class="cover c2">短视频 · 实战记录</div>
         <div class="body">
+          <span class="badge">下沉平台作品</span>
           <h3>《王者荣耀》实战记录｜对局片段与团队配合切片</h3>
           <div class="data">播放 1 万+</div>
           <div class="data">从对局中提炼可复用的操作与配合节点</div>
@@ -321,9 +352,10 @@
         </div>
       </div>
 
-      <div class="work">
+      <div class="work" data-cat="project">
         <div class="cover c3">项目文档 · 复盘</div>
         <div class="body">
+          <span class="badge">项目经历</span>
           <h3>王者荣耀 200 人高校赛复盘报告</h3>
           <div class="data">赛制 / 赛务 / 风控 / 问题清单</div>
           <div class="data">以组织者视角整理，含改进建议</div>
@@ -368,11 +400,26 @@
       <h2>联系方式</h2>
       <div class="line">求职意向：游戏策划培训生（游戏体验测评 / 开放世界方向）</div>
       <div class="line"><a href="tel:19722710019">197-2271-0019</a> · <a href="mailto:2313966850@qq.com">2313966850@qq.com</a></div>
-      <div class="line">山西省忻州市 · 可实习 2026.11 — 2027.06</div>
+      <div class="line">山西省忻州市</div>
       <div class="note">本页内容与简历同步，作品链接可直接访问。</div>
     </div>
   </div>
 </footer>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const works = document.querySelectorAll('.work');
+  tabs.forEach(t => {
+    t.addEventListener('click', () => {
+      tabs.forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      const cat = t.dataset.cat;
+      works.forEach(w => {
+        w.style.display = (cat === 'all' || w.dataset.cat === cat) ? '' : 'none';
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
