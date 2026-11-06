@@ -63,7 +63,9 @@
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;}
   .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-  @media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  @media(max-width:960px){.grid-4{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:720px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}}
 
   .kv{font-size:14px;color:var(--sub);}
   .kv b{color:var(--ink);font-weight:600;}
@@ -188,52 +190,40 @@
     <div class="sec-head"><h2>关于我</h2><span class="en">About</span><span class="rule"></span></div>
 
     <div class="grid-2">
-      <div>
-        <div class="card">
-          <h3 style="font-size:16px;margin-bottom:12px;">教育经历</h3>
-          <div class="edu-line">
-            <b>晋中学院 | 思想政治教育 | 本科</b>
-            <span class="when">2023.09 - 2027.06（预计毕业）</span>
-          </div>
-          <div class="desc" style="margin-top:8px;">主修课程：心理学、逻辑学、社会学、公文写作。</div>
-        </div>
-
-        <div class="card" style="margin-top:16px;">
-          <h3 style="font-size:16px;margin-bottom:4px;">技能</h3>
-          <div class="skill-item">
-            <div class="k">开放世界拆解</div>
-            <p>从探索动线、关卡引导、战斗手感、长线养成四个维度拆解体验，能以同类产品为参照做横向对照，提出用户体验优化建议。</p>
-          </div>
-          <div class="skill-item">
-            <div class="k">体验反馈产出</div>
-            <p>独立完成选题、脚本、录制、剪辑与数据复盘，单条播放 6.8 万+、点赞近 2000+；擅长把体验写成「机制—体验—问题—建议」的结构化反馈。</p>
-          </div>
-          <div class="skill-item">
-            <div class="k">问题记录与闭环</div>
-            <p>独立统筹 200 人规模电竞赛事，产出完整执行 SOP 与三级应急预案，达成 100% 完赛率、0 重大事故；习惯「记录—复现—改进—回查」。</p>
-          </div>
-        </div>
+      <div class="card">
+        <div class="num-mark">EDUCATION</div>
+        <h3 style="font-size:16px;margin-bottom:8px;">晋中学院 · 思想政治教育 · 本科</h3>
+        <div class="desc">2023.09 — 2027.06（预计毕业）</div>
+        <div class="desc" style="margin-top:10px;">主修课程：心理学、逻辑学、社会学、公文写作。习惯从玩家动机与行为角度解释体验问题，而非只描述现象。</div>
       </div>
-
-      <div>
-        <div class="side-stat">
-          <div class="num">1<span>年</span></div>
-          <div class="cap">电竞社管理经验</div>
-        </div>
-        <div class="side-stat">
-          <div class="num">200<span>+</span></div>
-          <div class="cap">独立操盘赛事规模</div>
-        </div>
-        <div class="side-stat">
-          <div class="num">6.8<span>万+</span></div>
-          <div class="cap">抖音单条作品播放</div>
-        </div>
+      <div class="card">
+        <div class="num-mark">FOCUS</div>
+        <h3 style="font-size:16px;margin-bottom:8px;">我在做什么</h3>
+        <div class="desc">玩的时候记录：卡关位置、触发条件、缺失的提示；玩完之后对照同类产品，把「哪里别扭」写成具体的交互节点、可能原因与改法。目标是把主观感受变成可被策划直接使用的反馈。</div>
       </div>
     </div>
 
-    <div class="card" style="margin-top:16px;">
-      <h3 style="font-size:16px;margin-bottom:10px;">自我介绍</h3>
-      <p style="font-size:14.5px;color:#374151;line-height:1.85;">1 年电竞社管理经验，独立操盘 200 人规模高校电竞赛事，熟悉活动全链路执行与风险管控；主修心理学、逻辑学与社会学，习惯从玩家动机与行为角度拆解体验，能区分"情绪宣泄"与"真实需求"；独立运营游戏短视频账号，懂玩家话语体系，渴望将玩家热爱转化为可落地的运营动作。</p>
+    <div class="grid-4" style="margin-top:16px;">
+      <div class="card">
+        <div class="num-mark">01</div>
+        <h3>开放世界拆解</h3>
+        <div class="desc" style="margin-top:6px;">从探索动线、关卡引导、战斗手感、长线养成四维度拆解体验，能以同类产品为参照做横向对照，提出用户体验优化建议。</div>
+      </div>
+      <div class="card">
+        <div class="num-mark">02</div>
+        <h3>体验反馈产出</h3>
+        <div class="desc" style="margin-top:6px;">独立完成选题、脚本、录制、剪辑与数据复盘，单条播放 6.8 万+、点赞近 2000+；擅长把体验写成「机制—体验—问题—建议」的结构化反馈。</div>
+      </div>
+      <div class="card">
+        <div class="num-mark">03</div>
+        <h3>问题记录与闭环</h3>
+        <div class="desc" style="margin-top:6px;">独立统筹 200 人规模电竞赛事，产出完整执行 SOP 与三级应急预案，达成 100% 完赛率、0 重大事故；习惯「记录—复现—改进—回查」。</div>
+      </div>
+      <div class="card">
+        <div class="num-mark">04</div>
+        <h3>自我介绍</h3>
+        <div class="desc" style="margin-top:6px;">1 年电竞社管理经验，独立操盘 200 人规模高校电竞赛事，熟悉活动全链路执行与风险管控；主修心理学、逻辑学与社会学，习惯从玩家动机与行为角度拆解体验，能区分"情绪宣泄"与"真实需求"；独立运营游戏短视频账号，懂玩家话语体系，渴望将玩家热爱转化为可落地的运营动作。</div>
+      </div>
     </div>
   </div>
 </section>
